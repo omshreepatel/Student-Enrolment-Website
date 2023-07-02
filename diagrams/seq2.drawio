@@ -1,0 +1,70 @@
+<mxfile host="Electron" modified="2023-04-19T09:06:55.664Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.1.2 Chrome/106.0.5249.199 Electron/21.4.3 Safari/537.36" etag="05f28UKGGg7RmmRfrOeZ" version="21.1.2" type="device">
+  <diagram id="kgpKYQtTHZ0yAKxKKP6v" name="Page-1">
+    <mxGraphModel dx="880" dy="532" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="3nuBFxr9cyL0pnOWT2aG-1" value="User" style="shape=umlLifeline;perimeter=lifelinePerimeter;container=1;collapsible=0;recursiveResize=0;rounded=0;shadow=0;strokeWidth=1;fontFamily=Times Roman Bold;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DTimes%2BRoman%2BBold;" parent="1" vertex="1">
+          <mxGeometry x="120" y="80" width="100" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="3nuBFxr9cyL0pnOWT2aG-2" value="" style="points=[];perimeter=orthogonalPerimeter;rounded=0;shadow=0;strokeWidth=1;" parent="3nuBFxr9cyL0pnOWT2aG-1" vertex="1">
+          <mxGeometry x="45" y="70" width="10" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="3nuBFxr9cyL0pnOWT2aG-5" value=":Sign-up Interface" style="shape=umlLifeline;perimeter=lifelinePerimeter;container=1;collapsible=0;recursiveResize=0;rounded=0;shadow=0;strokeWidth=1;fontFamily=Times Roman Bold;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DTimes%2BRoman%2BBold;" parent="1" vertex="1">
+          <mxGeometry x="300" y="80" width="100" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="3nuBFxr9cyL0pnOWT2aG-6" value="" style="points=[];perimeter=orthogonalPerimeter;rounded=0;shadow=0;strokeWidth=1;" parent="3nuBFxr9cyL0pnOWT2aG-5" vertex="1">
+          <mxGeometry x="45" y="80" width="10" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="3nuBFxr9cyL0pnOWT2aG-8" value="Click On Sign-up" style="verticalAlign=bottom;endArrow=block;entryX=0;entryY=0;shadow=0;strokeWidth=1;fontFamily=Times Roman Bold;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DTimes%2BRoman%2BBold;" parent="1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="175" y="163.0000000000001" as="sourcePoint" />
+            <mxPoint x="345.0000000000001" y="163.0000000000001" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3nuBFxr9cyL0pnOWT2aG-9" value="Display Home Page" style="verticalAlign=bottom;endArrow=block;shadow=0;strokeWidth=1;entryX=1.106;entryY=0.874;entryDx=0;entryDy=0;entryPerimeter=0;fontFamily=Times Roman Bold;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DTimes%2BRoman%2BBold;" parent="1" target="3nuBFxr9cyL0pnOWT2aG-6" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="705.0500000000002" y="299.99999999999994" as="sourcePoint" />
+            <mxPoint x="534" y="299.99999999999994" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a3MtyQ4JeC1WlzREZEPk-7" value="Fill Details Form" style="verticalAlign=bottom;endArrow=block;entryX=0;entryY=0;shadow=0;strokeWidth=1;fontFamily=Times Roman Bold;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DTimes%2BRoman%2BBold;" parent="1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="355" y="171.0000000000001" as="sourcePoint" />
+            <mxPoint x="525.0000000000001" y="171.0000000000001" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a3MtyQ4JeC1WlzREZEPk-12" value="Valid Information" style="verticalAlign=bottom;endArrow=block;entryX=0;entryY=0;shadow=0;strokeWidth=1;fontFamily=Times Roman Bold;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DTimes%2BRoman%2BBold;" parent="1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="534" y="181.0000000000001" as="sourcePoint" />
+            <mxPoint x="704" y="181.0000000000001" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a3MtyQ4JeC1WlzREZEPk-13" value=":Sign-Up Class" style="shape=umlLifeline;perimeter=lifelinePerimeter;container=1;collapsible=0;recursiveResize=0;rounded=0;shadow=0;strokeWidth=1;fontFamily=Times Roman Bold;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DTimes%2BRoman%2BBold;" parent="1" vertex="1">
+          <mxGeometry x="479" y="80" width="100" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="a3MtyQ4JeC1WlzREZEPk-14" value="" style="points=[];perimeter=orthogonalPerimeter;rounded=0;shadow=0;strokeWidth=1;" parent="a3MtyQ4JeC1WlzREZEPk-13" vertex="1">
+          <mxGeometry x="45" y="80" width="10" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="a3MtyQ4JeC1WlzREZEPk-15" value=":Database" style="shape=umlLifeline;perimeter=lifelinePerimeter;container=1;collapsible=0;recursiveResize=0;rounded=0;shadow=0;strokeWidth=1;fontFamily=Times Roman Bold;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DTimes%2BRoman%2BBold;" parent="1" vertex="1">
+          <mxGeometry x="660" y="80" width="100" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="a3MtyQ4JeC1WlzREZEPk-16" value="" style="points=[];perimeter=orthogonalPerimeter;rounded=0;shadow=0;strokeWidth=1;" parent="a3MtyQ4JeC1WlzREZEPk-15" vertex="1">
+          <mxGeometry x="45" y="80" width="10" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="a3MtyQ4JeC1WlzREZEPk-20" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;endArrow=classic;endFill=1;curved=1;sketch=0;" parent="a3MtyQ4JeC1WlzREZEPk-15" edge="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="62.36577181208054" y="140" as="sourcePoint" />
+            <mxPoint x="62.36577181208054" y="160" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="123" y="150" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a3MtyQ4JeC1WlzREZEPk-21" value="&lt;font face=&quot;times roman&quot;&gt;Check()&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="740" y="205" width="60" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

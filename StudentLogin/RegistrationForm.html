@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration form</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin: 15px 30px;
+            font-size: 18px;
+            padding: 8px;
+        }
+
+        .container {
+            background-color: #f2f2f2;
+            padding: 4px 16px;
+            border: 2px solid grey;
+            border-radius: 4px;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="date"],
+        input[type="email"],
+        input[type="img"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .alignment {
+            text-align: center;
+            font-size: 40px;
+        }
+
+        .starmarked {
+            color: red;
+            border: 2px solid black;
+            display: inline;
+        }
+
+        .required:after {
+            content: " *";
+            color: red;
+        }
+
+        input[type="submit"] {
+            background-color: #ccc;
+            padding: 12px 6px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            align-items: center;
+        }
+
+        .text_center {
+            text-align: center;
+            font-size: 22px;
+        }
+
+        .someError {
+            color: red;
+            font-style: bold;
+            font-size: 15px;
+        }
+        
+        .cgpa{
+            font-size: 12px;
+            border: 1px solid grey;
+            display: inline;
+            padding: 1px 3px;
+            
+        }
+        .instructions{
+            display: inline-block;
+            width: 700px;
+            font-size: 15px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 3px 2px;
+            border: 2px solid black;
+            border-radius: 5px;
+            margin: 5px 2px;
+        }
+        .para{
+            font-style: italic;
+            margin: 2px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="alignment">Registration Form</h1>
+    <div>
+        <p>This is a registration form for students for enrolment in next semester</p>
+    </div>
+    <div class="instructions">
+        <b> >Some insturctions for filling the form.></b>
+        <ol>
+            <li>Enter valid details only.</li>
+            <li>Enter enrolment number in the format:- 0834CS201081 or 0834cs201081</li>
+            <li>enter full name, father's name and Guardian's name  in  the format:- first_name//space// last_name
+                <p class="para">*No need to add middle name!</p>
+            </li>
+            
+            <li>Enter date of birth in the format DD/MM/YYYY.</li>
+            <li>Enter Aadhar number in the format XXXX XXXX XXXX.</li>
+            
+        </ol>
+    </div>
+    <div>
+        <p class="starmarked">* marked details are compulsary to fill!</p>
+    </div>
+    <br>
+    <div class="centerAlign">
+
+
+        <form action="backend.php" class="container" name="myForm" onsubmit="return validation()" method="post">
+            <div class="text_center">Course details:</div>
+            <div>
+                <label for="Course" class="required" id="course">Course:</label>
+                <select name="Course" required>
+                    <option value="" disabled selected>Select your course</option>
+                    <option value="M.B.A">M.B.A</option>
+                    <option value="Engineering">Engineering</option>
+                </select>
+            </div>
+
+            <br>
+            <div>
+                <label for="branch" class="required">Branch: </label>
+                <select name="branch" required>
+                    <option value="" disabled selected>Select your branch</option>
+                    <option value="cs">Computer Science and Engineering</option>
+                    <option value="me">Mechanical Engineering</option>
+                    <option value="it">Information Technology</option>
+                    <option value="civil">Civil Engineering</option>
+                    <option value="ee">Electonic and Electrical Engineering</option>
+                </select>
+
+
+            </div>
+            <br>
+
+            <div>
+                <label for="semester" class="required">Semester:</label>
+                <select name="semester" required>
+                    <option value="1st">1st semester </option>
+                    <option value="2nd">2nd semester</option>
+                    <option value="3rd">3rd semester</option>
+                    <option value="4th">4th semester</option>
+                    <option value="5th">5th semester</option>
+                    <option value="6th">6th semester</option>
+                    <option value="7th">7th semester</option>
+                    <option value="8th">8th semester</option>
+                </select>
+            </div>
+            <br>
+            <div>
+                <label for="enrolmentNo" class="required">Enrolment number: </label>
+                <input type="text" name="myEnrolment" id="Enrolment">
+                <b><span class="someError" id="enrolmentError"></span></b>
+            </div>
+            <br>
+
+            <div class="text_center">Personal details: </div>
+            <br>
+
+
+            <div id="name">
+                <label class="required">Full name:</label>
+                <input type="text" name="myName" id="Name">
+                <b><span class="someError" id="nameError"> </span></b>
+            </div>
+            <br>
+
+            <div>
+                <label for="gender" class="required">Gender:</label>
+
+                <input type="radio" name="gender" value="male" required> Male
+                <input type="radio" name="gender" value="female"> Female
+                <input type="radio" name="gender" value="other"> Other
+
+            </div>
+            <br>
+
+            <div>
+                <label for="image" class="required">Upload Image</label>
+                 <input type="file" required>
+            </div>
+            <br>
+            <div>
+                <label for="relation" class="required">Fathers Name</label>
+                <input type="text" id="fName" name="myFatherName">
+                <b><span class="someError" id="fatherNameError"></span></b>
+            </div>
+            <br>
+            <div>
+                <label for="dob" class="required">Date of Birth:</label>
+                <input type="text" id="DOB" required>
+            </div>
+            <br>
+
+            <div>
+                <label for="aadhar" class="required">Aadhar number:</label>
+                <input type="text" id="aadharNumber" placeholder="0000-0000-0000"  required>
+            </div>
+            <br>
+
+            <div>
+                <label for="contact" class="required">Contact No.:</label>
+                <input type="number" placeholder="12345-67890" maxlength="10" id="pNumber"
+                required>
+            </div>
+            <br>
+
+
+            <div>
+                <label for="fatherContact" class="required">Father's Contact No.:</label>
+                <input type="number" id="fatherpNumber" placeholder="12345-67890" maxlength="10" required>
+            </div>
+            <br>
+
+            <div>
+                <label for="mail" class="required">E-Mail:</label>
+                <input type="email" id="eMail" required>
+            </div>
+            <br>
+
+            <div>
+                <label for="category" class="required">Category:</label>
+                <select name="category" required>
+                    <option value="" disabled selected>Select your category</option>
+                    <option value="General">General</option>
+                    <option value="OBC">OBC</option>
+                    <option value="SC">SC</option>
+                    <option value="ST">ST</option>
+                </select>
+            </div>
+            <br>
+
+            <div>
+                <label for="address" class="required">Address:</label>
+                <input type="text" size="30">
+            </div>
+            <br>
+
+            <div>
+                <label for="city" class="required">City:</label>
+                <input type="text" required>
+            </div>
+            <br>
+
+            <div>
+                <label for="state" class="required">State:</label>
+                <select name="state" id="state" required>                  
+                     <option value="" disabled selected>Select your State</option>
+                    <option value="Andhra Pradesh">Andhra Pradesh</option>
+                    <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                    <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                    <option value="Assam">Assam</option>
+                    <option value="Bihar">Bihar</option>
+                    <option value="Chandigarh">Chandigarh</option>
+                    <option value="Chhattisgarh">Chhattisgarh</option>
+                    <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+                    <option value="Daman and Diu">Daman and Diu</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Lakshadweep">Lakshadweep</option>
+                    <option value="Puducherry">Puducherry</option>
+                    <option value="Goa">Goa</option>
+                    <option value="Gujarat">Gujarat</option>
+                    <option value="Haryana">Haryana</option>
+                    <option value="Himachal Pradesh">Himachal Pradesh</option>
+                    <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                    <option value="Jharkhand">Jharkhand</option>
+                    <option value="Karnataka">Karnataka</option>
+                    <option value="Kerala">Kerala</option>
+                    <option value="Madhya Pradesh">Madhya Pradesh</option>
+                    <option value="Maharashtra">Maharashtra</option>
+                    <option value="Manipur">Manipur</option>
+                    <option value="Meghalaya">Meghalaya</option>
+                    <option value="Mizoram">Mizoram</option>
+                    <option value="Nagaland">Nagaland</option>
+                    <option value="Odisha">Odisha</option>
+                    <option value="Punjab">Punjab</option>
+                    <option value="Rajasthan">Rajasthan</option>
+                    <option value="Sikkim">Sikkim</option>
+                    <option value="Tamil Nadu">Tamil Nadu</option>
+                    <option value="Telangana">Telangana</option>
+                    <option value="Tripura">Tripura</option>
+                    <option value="Uttar Pradesh">Uttar Pradesh</option>
+                    <option value="Uttarakhand">Uttarakhand</option>
+                    <option value="West Bengal">West Bengal</option>
+                </select>
+
+
+            </div>
+            <br>
+
+            <div>
+                <label for="pincode" class="required">Pin code:</label>
+                <input type="number" placeholder="000000" id="pin" required>
+            </div>
+            <br>
+
+            <div class="text_center">Guardian details: </div>
+            <br>
+
+
+            <div>
+                <label for="guardianName">Guardian name: </label>
+                <input type="text" id="guardianName" name="myGuardian">
+
+            </div>
+            <br>
+
+            <div>
+                <label for="guardianPhone">Guardian Phone no.: </label>
+                <input type="number" placeholder="12345-67890" id="myGuardianPhoneNo" maxlength="10">
+            </div>
+            <br>
+
+            <div class="text_center">Academic details: </div>
+            <br>
+            <div>
+                <label for="cgpa" class="required">Aggregate CGPA: </label>
+                <input type="text" id="mycgpa">
+                <i><p class="cgpa">*If 1st semester enter 0.0 </p></i>
+            </div>
+
+
+            <!-- <label class="required">Name:</label>
+    <input type="text" required> -->
+            <div>
+                <input type="submit" value="SUBMIT NOW">
+            </div>
+
+
+
+        </form>
+    </div>
+    <script>
+
+        function validation() {
+            let n = document.getElementById('Name').value;
+            let fn = document.getElementById('fName').value;
+            let gn=  document.getElementById('guardianName').value;
+            let pn=document.getElementById('pNumber').value;
+            let gpn=document.getElementById('myGuardianPhoneNo').value;
+            let DOB=document.getElementById('DOB').value;
+            let an=document.getElementById('aadharNumber').value;
+            let fpn=document.getElementById('fatherpNumber').value;
+            let email=document.getElementById('eMail').value;
+            let pc=document.getElementById('pin').value;
+            let gpa=document.getElementById('mycgpa').value;
+            let en=document.getElementById('Enrolment').value;
+
+            //Enrolment
+            let regEnrol=/^[0-9]{4}[a-zA-z]{2}[0-9]{6}$/;
+            if (!regEnrol.test(en)) {
+                // document.getElementById('nameError').innerHTML = "** invalid name..";
+                alert("** invalid enrolment Number..\n Read instructions!");
+                return false;
+            }
+
+            //full name
+            let regName = /^[a-zA-Z]+ [a-zA-Z]+$/;
+            if (!regName.test(n)) {
+                // document.getElementById('nameError').innerHTML = "** invalid name..";
+                alert("** invalid name..\n Read instructions!");
+                return false;
+            }
+
+            // fathers name
+            let regFName = /^[a-zA-Z]+ [a-zA-Z]+$/;
+            if (!regFName.test(fn)) {
+                // document.getElementById('fatherNameError').innerHTML = "** invalid fathers name..";
+                alert("** invalid father's name..\n Read instructions!");
+                return false;
+            }
+
+            // DOB
+            let pattern =/^([0-9]{2})\/([0-9]{2})\/([0-9]{4})$/;
+            if(!pattern.test(DOB))
+            {
+                alert("** incorrect date \n Read instructons!");
+                return false;
+            }
+
+            //Aadhar number
+            var regexp = /^[2-9]{1}[0-9]{3}\s[0-9]{4}\s[0-9]{4}$/; 
+            if(!regexp.test(an))
+            {
+                alert("** incorrect aadhar number \n Read instructons!");
+                return false;
+            }
+
+            //phone number
+            let regPhoneNo= /^\d{10}$/;
+            if(!regPhoneNo.test(pn))
+            {
+                alert(" ** invalid phone number..\n Read instructions!");
+                return false;
+            }
+
+            //father's phone number
+            if(!regPhoneNo.test(fpn))
+            {
+                alert(" ** invalid father' contact number..\n Read instructions!");
+                return false;
+            }
+
+            //email
+            var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+            if(!validRegex.test(email))
+            {
+                alert("** invalid email id.. \n Read instructions!")
+                return false;
+            }
+
+            //pincode
+            var pat1=/^[1-9]{1}[0-9]{2}[0-9]{3}$/;
+            if (!pat1.test(pc)) {
+                alert("** invalid pincode.. \n Read instructions!")
+                return false;
+            }
+
+            // guardian name
+            let regGName = /^[a-zA-Z]+ [a-zA-Z]+$/;
+            if(gn.length==0)
+            {
+                return true;
+            }
+            if(!regGName.test(gn) || !gn.length==0)
+            {
+                alert("** invalid guardian's name..\n Read instructions!");
+                return false;
+            }
+
+
+            //guardian phone number
+            if(!regPhoneNo.test(gpn))
+            {
+                alert(" ** invalid guardians phone number..\n Read instructions!");
+                return false;
+            }
+
+            //cgpa
+            var reg = /[0-9][.][0-9]/;
+            if(!reg.test(gpa))
+            {
+                alert(" ** invalid cgpa..\n Read instructions!");
+                return false;
+            }
+        }
+    </script>
+</body>
+
+</html>
